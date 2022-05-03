@@ -59,7 +59,7 @@ def Hide_Post(request, post_id):
   post.save()
   return redirect('gerapporteerde_comments')
 
-@permission_required('comments_feed.change_user')
+@permission_required('auth.change_user', raise_exception=True)
 def Block_User(request, user_id):
   User = get_user_model()
 
