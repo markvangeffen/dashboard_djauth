@@ -1,6 +1,13 @@
 # dashboard
 Django_Postgres_Dashboard_Website
 
+# apps:
+Dashboard is the main app.
+Homepage is the homepage.
+Clusters, organisatie, persoonlijk and teams are organisation levels for different pages.
+Comments_feed is an 'twitter' like app example.
+Static and templates for static references
+
 # hint:
 1: check permission inside a templae in Django: https://stackoverflow.com/questions/9469590/check-permission-inside-a-template-in-django
 
