@@ -3,9 +3,9 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect 
 from django.contrib.auth.decorators import login_required, permission_required
 from django.db.models import Count
-from .forms import PostForm # add this
+from .forms import PostForm
 from .models import Post, Report
-from django.contrib.auth import get_user_model  # add to the imports
+from django.contrib.auth import get_user_model
 
 def Comment_Feed(request):
   if request.method == 'POST':

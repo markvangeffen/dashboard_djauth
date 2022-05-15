@@ -14,7 +14,7 @@
 
 {% block first_left_block_content %}
   <div  class="left_row_content">
-    <form method="post" action="{% url 'login' %}">
+    <form method="post" action="{% url 'authapp:login' %}">
       {% csrf_token %}
       <table>
         <tr>
@@ -52,7 +52,10 @@
 {% block second_left_block_content %}
   <div class="left_row_content">
     {# Assumes you setup the password_reset view in your URLconf #}
-    <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+    <a href="{% url 'authapp:password_reset' %}">Lost password?</a>
+    <br>
+    {# New User #}
+    <a href="{% url 'authapp:password_reset' %}">New member?</a>
   </div>
 {% endblock second_left_block_content %}
 
@@ -60,7 +63,3 @@
   <div class="right_row_content">
   </div>
 {% endblock second_right_block_content %}
-
-{% block js %}
-<script src="/static/js/sidebars.js"></script>
-{% endblock js %}

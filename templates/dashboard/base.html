@@ -64,11 +64,20 @@
           <div class="top_navbar_right">
             <ul>
               {% if request.user.is_authenticated == False %}
-              <li><a class="nav-link" href="/accounts/login">Log In</a></li>
+              <li><a href="/login">Log In</a></li>
               {% endif %}
               {% if request.user.is_authenticated == True %}
               <li class="top_navbar_text">Goedemiddag {{ user.first_name }} {{ user.last_name }} </li>
-              <li><a href="/accounts/logout">Log Out</a></li>
+              <div class="dropdown">
+                <button class="dropbtn">Dropdown
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <li><a href="/logout">Log Out</a></li>
+                    <li><a href="/edit">Edit Profile</a></li>
+                    <li><a href="/password_change">Change Password</a></li>                
+                </div>
+              </div>
               {% endif %}
               <li><a href="#about">About</a></li>
             </ul>

@@ -23,7 +23,8 @@ from clusters.views import ClustersView
 from organisatie.views import OrganisatieView
 
 urlpatterns = [
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('authapp.urls')),  
+    # replaced with urls in autapp: path('', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls, name='admin'),
     path('', HomepageListView.as_view(), name='home'),
     path('clusters/', ClustersView.as_view(), name='clusters'),

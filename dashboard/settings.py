@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
 
+    'authapp',
     'clusters',
     'comments_feed',
     'dashboard',

@@ -13,6 +13,7 @@ Static and templates for static references
 
 # to do
 URL's aanpassen, href="{% url 'persoonlijk' %}", bij alle verwijzingen, referentie opgeven in plaats van harde url
+CSS: top_navabar, overflow check due to drop-down. 
 
 Voorbeeld: https://auth0.com/blog/django-authentication/
 En voorbeeld: https://auth0.com/blog/django-tutorial-building-and-securing-web-applications/;
