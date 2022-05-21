@@ -56,8 +56,8 @@
               <li><a href="/admin">Admin console</a></li>
               {% endif %}
               {% if request.user.is_authenticated == True %}
-              <li><a href="{% url 'comments_feed' %}">Comments_feed</a></li>
-              <li><a href="{% url 'gerapporteerde_comments' %}">Gerapporteerde_comments</a></li>
+              <li><a href="{% url 'comments_feed' %}">Comments feed</a></li>
+              <li><a href="{% url 'gerapporteerde_comments' %}">Gerapporteerde comments</a></li>
               {% endif %}
             </ul>
           </div>
@@ -67,17 +67,18 @@
               <li><a href="/login">Log In</a></li>
               {% endif %}
               {% if request.user.is_authenticated == True %}
-              <li class="top_navbar_text">Goedemiddag {{ user.first_name }} {{ user.last_name }} </li>
-              <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <li><a href="/logout">Log Out</a></li>
-                    <li><a href="/edit">Edit Profile</a></li>
-                    <li><a href="/password_change">Change Password</a></li>                
-                </div>
+              <!-- <li class="top_navbar_text">Text</li> -->
+              <div class="top_navbar_dropdown">
+                <button class="top_navbar_dropbtn">Goedemiddag {{ user.first_name }} {{ user.last_name }} </button>
+                <div class="top_navbar_dropdown-content">
+                  <li><a href="/logout">Log Out</a></li>
+                  <li><a href="/edit">Edit Profile</a></li>
+                  <li><a href="/password_change">Change Password</a></li>
+                  <li><a href="#about">About</a></li>
+            </div>
               </div>
               {% endif %}
-              <li><a href="#about">About</a></li>
+              <!-- <li><a href="#about">About</a></li> -->
             </ul>
           </div>
         </div>
