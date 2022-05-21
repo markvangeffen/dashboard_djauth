@@ -69,9 +69,7 @@
               {% if request.user.is_authenticated == True %}
               <li class="top_navbar_text">Goedemiddag {{ user.first_name }} {{ user.last_name }} </li>
               <div class="dropdown">
-                <button class="dropbtn">Dropdown
-                  <i class="fa fa-caret-down"></i>
-                </button>
+                <button class="dropbtn">Dropdown</button>
                 <div class="dropdown-content">
                     <li><a href="/logout">Log Out</a></li>
                     <li><a href="/edit">Edit Profile</a></li>
