@@ -69,7 +69,10 @@
               {% if request.user.is_authenticated == True %}
               <!-- <li class="top_navbar_text">Text</li> -->
               <div class="top_navbar_dropdown">
-                <button class="top_navbar_dropbtn">Goedemiddag {{ user.first_name }} {{ user.last_name }} </button>
+                <button class="top_navbar_dropbtn ">
+                  <i class="fa fa-bars"></i>
+                  <not_visible>&nbsp;Goedemiddag {{ user.first_name }} {{ user.last_name }}</not_visible>
+                </button>
                 <div class="top_navbar_dropdown-content">
                   <li><a href="/logout">Log Out</a></li>
                   <li><a href="/edit">Edit Profile</a></li>

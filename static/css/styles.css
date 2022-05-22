@@ -3,7 +3,7 @@
 :root {
   --sidenav_width: 15vw;
   --left_row_content: 60%;
-  --top_navbar_width: 5vw;
+  --top_navbar_width: 6vw;
   --navbar_background_colour: rgb(167, 205, 248);
   --navbar_text_colour: #ffffff; 
   --navbar_text_hover: rgb(24, 70, 130);
@@ -173,10 +173,10 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
-/* Style the top navigation bar links */
+/* Style the top navigation bar anchors */
 .top_navbar a {
-  display: flex;
   color: var(--navbar_text_colour);
+  display: flex;
   font-size: medium;
   padding: 14px 16px;
   text-align: center;
@@ -187,9 +187,11 @@ h1, h2, h3, h4, h5, h6 {
 .top_navbar li {
   color: var(--navbar_text_colour);
   display: flex;
+  font-size: medium;
   float: left;
-  text-decoration: none;
+  /* padding: 14px 16px; */
   text-align: center;
+  text-decoration: none;
 }
 
 /* Style the unordered list in the navbar */
@@ -213,6 +215,7 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   color: var(--navbar_text_colour);
   cursor: pointer;
+  display: flexbox;
   /* display: inline-flex; */
   /* float: left; */
   font-size: medium;
@@ -224,6 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* The container <div> - needed to position the dropdown content */
 .top_navbar_dropdown { 
+  display: block;
   position: relative;
   /* display: inline-flexflex; */
   /* flex-direction: column; */
@@ -332,11 +336,21 @@ stack on top of each other instead of next to each other */
     
     /* Hide the sidenav text, only show the icons */
     @media screen and (max-width: 870px) {
-      .sidenav not_visible{   
+      .sidenav not_visible, .top_navbar_dropdown not_visible {   
         display: none !important;
+        /* width: 100%; */
       }
     }
-    
+
+    /* Hide the top_navbar_dropdown text, only show the hamburger */
+    @media screen and (max-width: 870px) {
+      .top_navbar_dropdown-content{   
+        background-color: var(--navbar_background_colour);
+        width: max-content;
+
+      }
+    }
+
     /* Set the icon in the middle */
     @media screen and (max-width: 870px) {
       .sidenav_logo_img {
