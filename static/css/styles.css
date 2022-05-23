@@ -36,9 +36,12 @@ body {
 
 /* Footer */
 .footer {
+  bottom:0;
   padding: 20px;
+  position: fixed;
   text-align: center;
   background: #ddd;
+  width:100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -355,5 +358,18 @@ stack on top of each other instead of next to each other */
     @media screen and (max-width: 870px) {
       .sidenav_logo_img {
         margin-left: 0vw; 
+      }
+    }
+
+    /* Set the icon in the middle */
+    @media screen and (max-width: 870px) {
+      .footer {
+        bottom:0;
+        font-size: xx-small;
+        padding: 5px;
+        position: fixed;
+        text-align: center;
+        background: #ddd;
+        /* width:100%; */
       }
     }
