@@ -37,6 +37,7 @@ INSTALLED_APPS = [
 
     'authapp',
     'clusters',
+    'crispy_forms',
     'comments_feed',
     'dashboard',
     'homepage',
@@ -44,6 +45,8 @@ INSTALLED_APPS = [
     'persoonlijk',
     'teams',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

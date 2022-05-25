@@ -1,12 +1,14 @@
 
 /* Variabels for sidennav_width*/
 :root {
-  --sidenav_width: 15vw;
+  --footer_heigth: 3vw;
   --left_row_content: 60%;
-  --top_navbar_width: 6vw;
   --navbar_background_colour: rgb(167, 205, 248);
   --navbar_text_colour: #ffffff; 
   --navbar_text_hover: rgb(24, 70, 130);
+  --sidenav_width: 15vw;
+  --top_navbar_padding: 1px 10px;
+  --top_navbar_width: 6vw;
 }
 
 * {
@@ -21,10 +23,11 @@ body {
 
 /* Content container */
 .content {  
+  
   display: flex;
   flex-wrap: wrap;
   margin-top: var(--top_navbar_width); /* als header uitstaat, aanzetten, anders weglaten*/
-
+  margin-bottom: var(--footer_heigth);
 }
 
 /* Fake image, just for this example */
@@ -37,7 +40,8 @@ body {
 /* Footer */
 .footer {
   bottom:0;
-  padding: 20px;
+  height: var(--footer_heigth);
+  padding: 2px;
   position: fixed;
   text-align: center;
   background: #ddd;
@@ -109,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Div to enclose the content of the website right of the side navbar*/
 .sidenav_helper {
   margin-left: var(--sidenav_width); /* Same as the width of the sidenav */
+  scroll-behavior: auto;
 }
 
 /* Style the logo image */
@@ -171,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Style the top navigation bar text */
 .top_navbar_text {
   color: var(--navbar_text_colour);
-  padding: 14px 16px;
+  padding: var(--top_navbar_padding);
   position: relative;
   text-decoration: none;
 }
@@ -181,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--navbar_text_colour);
   display: flex;
   font-size: medium;
-  padding: 14px 16px;
+  padding: var(--top_navbar_padding);
   text-align: center;
   text-decoration: none;
 }
@@ -192,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   font-size: medium;
   float: left;
-  /* padding: 14px 16px; */
+  /* padding: var(--top_navbar_padding); */
   text-align: center;
   text-decoration: none;
 }
@@ -222,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
   /* display: inline-flex; */
   /* float: left; */
   font-size: medium;
-  padding: 14px 16px;
+  padding: var(--top_navbar_padding);
   text-align: center;
   text-decoration: none;
   /* z-index: 1; */
@@ -292,7 +297,7 @@ stack on top of each other instead of next to each other */
     @media screen and (max-width: 870px) {
       .sidenav, .sidenav_helper, .top_navbar {   
         --sidenav_width: 20vw;
-        --top_navbar_width: 15vw;
+        --top_navbar_width: 23vw;
       }
     }
 
@@ -365,8 +370,9 @@ stack on top of each other instead of next to each other */
     @media screen and (max-width: 870px) {
       .footer {
         bottom:0;
+        height: var(--footer_heigth);
         font-size: xx-small;
-        padding: 5px;
+        padding: 2px;
         position: fixed;
         text-align: center;
         background: #ddd;

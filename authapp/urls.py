@@ -1,5 +1,6 @@
 from django.urls import path
-# from .views import edit, dashboard, register
+from .views import edit, register
+# from .views import dashboard
 from django.urls import reverse_lazy
 from django.contrib.auth.views import (LoginView, LogoutView, PasswordResetDoneView, PasswordResetView,
                                        PasswordResetCompleteView, PasswordResetConfirmView,
@@ -17,7 +18,7 @@ urlpatterns = [
     path('login/', LoginView.as_view(template_name='registration/login.html'), 
         name='login'),
         # The next line can be overridden by local_settings: LOGOUT_REDIRECT_URL = '/'
-        # I chose for a template for the logoutView:
+        # I chose for a custom template for the logoutView:
     path('logout/', LogoutView.as_view(template_name='authapp/logged_out.html'), 
         name='logout'),   
     path('password_change/', PasswordChangeView.as_view(

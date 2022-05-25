@@ -21,6 +21,11 @@ class UserRegistration(forms.ModelForm):
 
 
 class UserEditForm(forms.ModelForm):
+    
+    first_name = forms.CharField(max_length=75, required=True)
+    last_name = forms.CharField(max_length=75, required=True)
+    email = forms.EmailField(max_length=75, required=True)
+
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email')
