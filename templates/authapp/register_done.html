@@ -14,6 +14,8 @@
 
 {% block first_left_block_content %}
   <div  class="left_row_content">
+    <h1>Welcome {{ new_user.first_name }}!</h1>
+    <p>Your account has been successfully created. Now you can <a href="{% url 'authapp:login' %}">log in</a>.</p>
   </div>
 {% endblock first_left_block_content %}
 

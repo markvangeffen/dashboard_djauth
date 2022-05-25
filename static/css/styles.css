@@ -8,7 +8,8 @@
   --navbar_text_hover: rgb(24, 70, 130);
   --sidenav_width: 15vw;
   --top_navbar_padding: 1px 10px;
-  --top_navbar_width: 6vw;
+  --top_navbar_width: 5vw;
+  --top_navbar_heigth: 5vw;
 }
 
 * {
@@ -22,11 +23,10 @@ body {
 }
 
 /* Content container */
-.content {  
-  
+.content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: var(--top_navbar_width); /* als header uitstaat, aanzetten, anders weglaten*/
+  margin-top: var(--top_navbar_heigth); /* als header uitstaat, aanzetten, anders weglaten*/
   margin-bottom: var(--footer_heigth);
 }
 
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 .top_navbar {
   background-color: var(--navbar_background_colour);
   display: flex;
-  height: var(--top_navbar_width);
+  height: var(--top_navbar_heigth);
   /* overflow: hidden; */
   position: fixed;
   top: 0;
@@ -159,22 +159,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style the top navigation bar left links*/
 .top_navbar_left {
+  background-color: var(--navbar_background_colour);
   display: flex;
   flex: 50%;
+  height: var(--top_navbar_heigth);
 } 
 
 /* Style the top navigation bar right links */
 .top_navbar_right {
+  background-color: var(--navbar_background_colour);
   display: flex;
   /* flex-wrap: wrap; */
   flex: 50%;
   /* flex-direction: row; */
+  height: var(--top_navbar_heigth);
   justify-content: flex-end;
   /* z-index: 1; */
 }
 
 /* Style the top navigation bar text */
 .top_navbar_text {
+  background-color: var(--navbar_background_colour);
   color: var(--navbar_text_colour);
   padding: var(--top_navbar_padding);
   position: relative;
@@ -183,6 +188,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style the top navigation bar anchors */
 .top_navbar a {
+  background-color: var(--navbar_background_colour);
   color: var(--navbar_text_colour);
   display: flex;
   font-size: medium;
@@ -193,6 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style the top navigation bar links */
 .top_navbar li {
+  background-color: var(--navbar_background_colour);
   color: var(--navbar_text_colour);
   display: flex;
   font-size: medium;
@@ -205,6 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Style the unordered list in the navbar */
 .top_navbar ul {
 /* list-style-type: none; */
+  background-color: var(--navbar_background_colour);
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -297,7 +305,8 @@ stack on top of each other instead of next to each other */
     @media screen and (max-width: 870px) {
       .sidenav, .sidenav_helper, .top_navbar {   
         --sidenav_width: 20vw;
-        --top_navbar_width: 23vw;
+        --top_navbar_heigth: 10vw;
+        --footer_heigth: 8vw;
       }
     }
 
@@ -370,7 +379,7 @@ stack on top of each other instead of next to each other */
     @media screen and (max-width: 870px) {
       .footer {
         bottom:0;
-        height: var(--footer_heigth);
+        height: calc(var(--footer_heigth));
         font-size: xx-small;
         padding: 2px;
         position: fixed;
@@ -379,3 +388,12 @@ stack on top of each other instead of next to each other */
         /* width:100%; */
       }
     }
+
+    /* Set the icon in the middle */
+    @media screen and (max-width: 870px) {
+      .content {
+        margin-top: calc(var(--top_navbar_heigth));
+        margin-bottom: calc(var(--footer_heigth));
+      }
+    }
+

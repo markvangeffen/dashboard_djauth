@@ -19,7 +19,6 @@
         <p>You can edit your account using the follow form</p>
             <form action="" method="post" class="form">
                 {% csrf_token %}
-                <!-- {{ form.as_p }} -->
                 {{ form|crispy }}
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

@@ -22,9 +22,11 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(template_name='authapp/logged_out.html'), 
         name='logout'),   
     path('password_change/', PasswordChangeView.as_view(
+        #succes_urrl defined so that 'standard' url django authentication is overridden.
+        success_url=reverse_lazy('authapp:password_change_done'),
         template_name='authapp/password_change_form.html'), 
         name='password_change'),
-    path('password_change/dond/', PasswordChangeDoneView.as_view(
+    path('password_change/done/', PasswordChangeDoneView.as_view(
         template_name='authapp/password_change_done.html'), 
         name='password_change_done'),
     path('password_reset/', PasswordResetView.as_view(
@@ -42,5 +44,4 @@ urlpatterns = [
     path('reset/done/', PasswordResetCompleteView.as_view(
         template_name='authapp/password_reset_complete.html'), 
         name='password_reset_complete'),
-
 ]
