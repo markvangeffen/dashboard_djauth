@@ -12,6 +12,7 @@ Static and templates for static references
 1: check permission inside a templae in Django: https://stackoverflow.com/questions/9469590/check-permission-inside-a-template-in-django
 
 # to do
+Aanpassen 403 geen toegang bij gerapporteerde comments
 URL's aanpassen, href="{% url 'persoonlijk' %}", bij alle verwijzingen, referentie opgeven in plaats van harde url
 CSS: top_navabar, overflow check due to drop-down. 
 
