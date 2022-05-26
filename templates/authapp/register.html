@@ -16,9 +16,7 @@
 {% block first_left_block_content %}
   <div  class="left_row_content">
     {% if form.errors %}
-    
     {% endif %}
-    
     <form action="" method="post" class="form container">
         {% csrf_token %}
         {{ form|crispy }}
